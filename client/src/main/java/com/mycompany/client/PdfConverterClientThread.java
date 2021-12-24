@@ -53,9 +53,11 @@ public class PdfConverterClientThread extends Thread {
             ois = new ObjectInputStream(socketOfClient.getInputStream());
         } catch (UnknownHostException e) {
             e.printStackTrace();
+            tbl.setValueAt("Don't know about host: " + serverHost + " : " + serverPort, rowIndex, 2);
             throw new RuntimeException("Don't know about host: " + serverHost + " : " + serverPort);
         } catch (IOException e) {
             e.printStackTrace();
+            tbl.setValueAt("Couldn't get I/O for the connection to " + serverHost + " : " + serverPort, rowIndex, 2);
             throw new RuntimeException("Couldn't get I/O for the connection to " + serverHost + " : " + serverPort);
         }
     }

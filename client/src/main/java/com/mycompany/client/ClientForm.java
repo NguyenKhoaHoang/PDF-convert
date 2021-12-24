@@ -225,39 +225,10 @@ public class ClientForm extends javax.swing.JFrame {
             } catch (Exception ex) {
                 tbl.setValueAt("Error", i, 2);
                 tbl.setValueAt(ex.getMessage(), i, 3);
+                JOptionPane.showMessageDialog(null, ex.getMessage());
                 ex.printStackTrace();
-//                JOptionPane.showMessageDialog(null, ex.getMessage());
             }
         }
-//        for (int i = 0; i < tbl.getRowCount(); i++) {  // Loop through the rows
-//            String filePath = tbl.getValueAt(i, 1).toString();
-//            try {
-//                PdfConverterClient pdfConverterClient = new PdfConverterClient(serverHost, Integer.parseInt(serverPort));
-//                pdfConverterClient.createSocketConnectionToServer();
-//                String outputPath = pdfConverterClient.sendFileToServer(filePath);
-//                tbl.setValueAt("Done", i, 2);
-//                tbl.setValueAt(outputPath, i, 3);
-//                pdfConverterClient.closeSocketConnectionToServer();
-//                JOptionPane.showMessageDialog(null, "Successfully - Output: " + outputPath);
-//            } catch (Exception ex) {
-//                tbl.setValueAt("Error", i, 2);
-//                tbl.setValueAt(ex.getMessage(), i, 3);
-//                ex.printStackTrace();
-//                JOptionPane.showMessageDialog(null, ex.getMessage());
-//            }
-//        }
-//        for ( ) {
-//            try {
-//                PdfConverterClient pdfConverterClient = new PdfConverterClient(serverHost, Integer.parseInt(serverPort));
-//                pdfConverterClient.createSocketConnectionToServer();
-//                String outputPath = pdfConverterClient.sendFileToServer(txtInputFile.getText());
-//                txtOutputFile.setText(outputPath);
-//                pdfConverterClient.closeSocketConnectionToServer();
-//                JOptionPane.showMessageDialog(null, "Successfully - Output: " + outputPath);
-//            } catch (Exception ex) {
-//                JOptionPane.showMessageDialog(null, ex.getMessage());
-//            }
-//        }
     }//GEN-LAST:event_btnConvertActionPerformed
 
 
